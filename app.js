@@ -4,6 +4,21 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+// Messages
+
+const messages = [
+  {
+    text: "Hi there!",
+    user: "Amando",
+    added: new Date()
+  },
+  {
+    text: "Hello World!",
+    user: "Charles",
+    added: new Date()
+  }
+];
+
 var indexRouter = require('./routes/index');
 var newMessagesRouter = require('./routes/new-messages')
 
@@ -18,6 +33,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Middleware function to pass messages array
+
+app.use((req, res, next) => {
+  req.messages = messages
+  next()
+})
 
 app.use('/', indexRouter);
 app.use('/new', newMessagesRouter);

@@ -1,8 +1,44 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+.message-container {
+  width: 100%;
+  height: fit-content;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.text-card {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: rgb(244, 244, 244);
+  border-left: 5px #00B7FF solid;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+
+.text-card > div > h1 {
+  font-weight: normal;
+}
+
+.text-card > div > h2 {
+  color: rgb(105, 105, 105);
+  font-size: 13px;
+  font-weight: lighter;
+}
+
+.text-card > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

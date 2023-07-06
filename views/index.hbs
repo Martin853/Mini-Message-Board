@@ -1,2 +1,12 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<h1 style="text-align: center;">Messages</h1>
+<div class="message-container">
+  {{#each messages}}
+      <div class="text-card">
+        <div>
+         <h1>User: {{this.user}}</h1>
+         <h2>Created at:{{this.added}}</h2>
+        </div>
+        <p>{{this.text}}</p>
+      </div>
+  {{/each}}
+</div>
