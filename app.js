@@ -9,12 +9,12 @@ var logger = require('morgan');
 const messages = [
   {
     text: "Hi there!",
-    user: "Amando",
+    user: "Chris",
     added: new Date()
   },
   {
     text: "Hello World!",
-    user: "Charles",
+    user: "Jay",
     added: new Date()
   }
 ];
